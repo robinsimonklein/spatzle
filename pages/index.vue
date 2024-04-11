@@ -2,13 +2,13 @@
   <div>
     <UContainer>
       <RecipesList />
-      <RecipesAddForm  />
+      <RecipesAddForm />
     </UContainer>
   </div>
 </template>
 
 <script setup lang="ts">
-const recipes = useRecipesStore()
+const recipes = useRecipesStore();
 
-await useAsyncData('recipes', () => recipes.refresh().then(() => true))
+await useAsyncData('recipes', () => recipes.refresh().then(() => true));
 </script>

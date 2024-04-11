@@ -1,3 +1,3 @@
-export default eventHandler(async (event) => {
-    return await useDrizzle().select().from(tables.recipes).all()
-})
+export default eventHandler(async () => {
+  return await useDrizzle().select().from(tables.recipes).all();
+});
