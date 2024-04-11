@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxthub/core", "@nuxt/ui"],
+  modules: ["@nuxthub/core",  "@nuxt/ui", '@pinia/nuxt'],
 
   hub: {
     database : true
