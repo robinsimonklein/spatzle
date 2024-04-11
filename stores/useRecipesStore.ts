@@ -7,7 +7,7 @@ export const useRecipesStore = defineStore('recipes', () => {
     items.value = await $fetch('/api/recipes', { method: 'GET' });
   };
 
-  const create = async (newRecipe: Recipe) => {
+  const create = async (newRecipe: FormData) => {
     await $fetch('/api/recipes', { method: 'POST', body: newRecipe });
   };
 

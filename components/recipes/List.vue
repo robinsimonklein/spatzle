@@ -1,51 +1,17 @@
 <template>
-  <UTable :rows="recipes.items" :columns>
-    <template #actions-data="{ row }">
-      <UButton
-        color="red"
-        variant="ghost"
-        icon="i-heroicons-trash"
-        :loading="isRemovingId === row.id"
-        :disabled="typeof isRemovingId === 'number'"
-        @click="remove(row.id)"
-      />
-    </template>
-  </UTable>
+  <div class="grid grid-cols-3 gap-4">
+    <UCard v-for="item in recipes.items">
+      <template v-if="item.coverImage" #header>
+        <img :src="'/blob/' + item.coverImage" :alt="item.name" />
+      </template>
+      <template #default>
+        <h2 class="mb-2 text-lg">{{ item.name }}</h2>
+        <p class="text-sm opacity-70">{{ item.description }}</p>
+      </template>
+    </UCard>
+  </div>
 </template>
 
 <script setup lang="ts">
-const columns = [
-  {
-    key: 'id',
-    label: 'Id',
-  },
-  {
-    key: 'name',
-    label: 'Nom',
-  },
-  {
-    key: 'description',
-    label: 'Description',
-  },
-  {
-    key: 'actions',
-  },
-];
-
 const recipes = useRecipesStore();
-
-const isRemovingId = ref<number | null>(null);
-
-async function remove(id: number) {
-  try {
-    isRemovingId.value = id;
-
-    await recipes.remove(id);
-    await recipes.refresh();
-  } catch (e) {
-    console.error(e);
-  } finally {
-    isRemovingId.value = null;
-  }
-}
 </script>

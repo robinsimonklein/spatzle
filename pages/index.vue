@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <UContainer>
-      <RecipesList />
-      <RecipesAddForm />
-    </UContainer>
-  </div>
+  <UContainer>
+    <RecipesList />
+  </UContainer>
 </template>
 
 <script setup lang="ts">

@@ -1,1 +1,1 @@
-# Nuxt 3 + NuxtUI + NuxtHub + Drizzle -> with Cloudflare Pages + D1
+# Nuxt 3 + NuxtUI + NuxtHub + Drizzle -> with Cloudflare Pages + D1 + R2

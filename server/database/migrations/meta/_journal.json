@@ -8,6 +8,13 @@
       "when": 1712861239597,
       "tag": "0000_tidy_ghost_rider",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1712872490064,
+      "tag": "0001_chubby_shinko_yamashiro",
+      "breakpoints": true
     }
   ]
 }
