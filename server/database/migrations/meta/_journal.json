@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1712861239597,
+      "tag": "0000_tidy_ghost_rider",
+      "breakpoints": true
+    }
+  ]
+}
